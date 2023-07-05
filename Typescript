@@ -1,0 +1,23 @@
+class Animal {
+    private nome: string;
+  
+    constructor(nome: string) {
+      this.nome = nome;
+    }
+  
+    public fazerBarulho(): void {
+      console.log(`${this.nome} está fazendo barulho.`);
+    }
+  }
+  
+  class Cachorro extends Animal {
+    public fazerBarulho(): void {
+      console.log(`${this.fazerBarulho} está latindo.`);
+    }
+  }
+  
+  const animal: Animal = new Animal("Animal");
+  animal.fazerBarulho();
+  
+  const cachorro: Cachorro = new Cachorro("Bob");
+  cachorro.fazerBarulho();
